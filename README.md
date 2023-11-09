@@ -1,2 +1,0 @@
-# MuseMe
-Web Dev Project
