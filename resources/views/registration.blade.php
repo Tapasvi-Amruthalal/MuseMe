@@ -6,6 +6,8 @@
 
         <title>Laravel</title>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -37,6 +39,24 @@
         </style>
     </head>
     <body>
+    <div class="nt-5">
+        @if($errors->any())
+        <div class="col-12">
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger">{{$error}}</div>
+            @endforeach
+            </div>
+        @endif
+    </div>
+    
+    @if(session()->has('error'))
+            <div class= "alert alert-danger">{{session('error')}}</div>
+    @endif
+
+    @if(session()->has('success'))
+            <div class="alert alert-success">{{session("success")}}</div>
+    @endif
+
     <form action="{{ route('registration.post' )}}" method="POST">
         @csrf
         <div class="container"> 

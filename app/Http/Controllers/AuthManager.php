@@ -47,7 +47,7 @@ class AuthManager extends Controller
         return redirect(route('registration'))->with("error","registration failed");
        }
 
-       return redirect(route('login'))->with("Success", "Registration Successful");
+       return redirect(route('login'))->with("success", "Registration Successful");
     }
     
 }
