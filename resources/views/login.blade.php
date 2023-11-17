@@ -192,7 +192,7 @@
         <h1 style="text-align: right; font-family: 'Segoe Script'; margin:0px;">MuseMe</h1>
         <h2 style="text-align:right; margin:0px; font-family: 'Segoe Script';font-size: small;">Discover Chords</h2>
         <h2 style="text-align:left;">Log in</h2>
-        <form class="login" action="{{ route('login.post' )}}" method="POST">
+        <form class="login" action="{{ route('login.post') }}" method="POST">
             @csrf
                 <label for="username">Username</label>
                 <input type="text" id="username" name="name" placeholder="Enter Username" required>

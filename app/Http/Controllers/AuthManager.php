@@ -22,6 +22,12 @@ class AuthManager extends Controller
 
         $credentials = $request->only('name', 'password');
         if(Auth::attempt($credentials)){
+
+            $sessionuser = $request->input();
+            $request->session()->put('username', $sessionuser['name']);
+
+            
+
             return redirect()->intended(route('home'))->with("Successful", "Login Successful");
         }
         return redirect(route('login'))->with("error", "Login Error");
