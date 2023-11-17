@@ -13,9 +13,9 @@ use App\Http\Controllers\AuthManager;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
+Route::get('/', function () {
+    return view('/home');
+})->name('home');
 // Route::get('/', function () {
 //     return view('navbar');
 // })->name('home');
