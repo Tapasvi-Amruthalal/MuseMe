@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -6,14 +6,14 @@
 
         <title>Laravel</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
         
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <!-- <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> -->
 
         <!-- Styles -->
-        <style>
+        <!-- <style>
             button { 
        width: 100%;
         padding: 15px; 
@@ -70,4 +70,145 @@
         </div> 
     </form>   
     </body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MuseMe - Discover Chords</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family:'Roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+  }
+  .container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .left-side {
+    flex: 1;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-side img {
+    max-width: 100%;
+    height: auto;
+  }
+  .right-side {
+    flex: 1;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .login {
+    width: 100%;
+    max-width: 300px;
+  }
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button[type="submit"]:hover {
+    background-color: #333;
+  }
+  .login-form label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+    <div class="nt-5">
+        @if($errors->any())
+        <div class="col-12">
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger">{{$error}}</div>
+            @endforeach
+        </div>
+        @endif
+    </div>
+    
+    @if(session()->has('error'))
+            <div class= "alert alert-danger">{{session('error')}}</div>
+    @endif
+
+    @if(session()->has('success'))
+            <div class="alert alert-success">{{session("success")}}</div>
+    @endif
+
+    <div class="container">
+        <div class="left-side">
+            <!-- Placeholder for the image. Replace with your actual image file -->
+            <img src="\images\8249743.jpg" alt="Guitar Illustration">
+            <p>Find chords for songs and play along!</p>
+        </div>
+        <div class="right-side">
+        <div class="login-form">
+        <h1 style="text-align: right; font-family: 'Segoe Script'; margin:0px;">MuseMe</h1>
+        <h2 style="text-align:right; margin:0px; font-family: 'Segoe Script';font-size: small;">Discover Chords</h2>
+        <h2 style="text-align:left;">Register Here</h2>
+        <form class="login" action="{{ route('login.post' )}}" method="POST">
+            @csrf
+                <label for="username">Username</label>
+                <input type="text" id="username" name="name" placeholder="Enter Username" required>
+                <label>Email : </label> 
+            <input type="text" placeholder="Enter email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password">
+                <button type="submit">Login</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
+
