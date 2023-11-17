@@ -19,7 +19,8 @@ Route::get('/', function () {
 // Route::get('/', function () {
 //     return view('navbar');
 // })->name('home');
-Route::get('/','App\Http\Controllers\MuseController@home');
+
+Route::get('/home','App\Http\Controllers\MuseController@home')->name('home');
 Route::get('/liked','App\Http\Controllers\MuseController@liked');
 Route::get('/playlist','App\Http\Controllers\MuseController@playlist');
 Route::get('/chords','App\Http\Controllers\MuseController@chords');
