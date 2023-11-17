@@ -195,7 +195,7 @@
         <h1 style="text-align: right; font-family: 'Segoe Script'; margin:0px;">MuseMe</h1>
         <h2 style="text-align:right; margin:0px; font-family: 'Segoe Script';font-size: small;">Discover Chords</h2>
         <h2 style="text-align:left;">Register Here</h2>
-        <form class="login" action="{{ route('login.post' )}}" method="POST">
+        <form class="login" action="{{ route('registration.post' )}}" method="POST">
             @csrf
                 <label for="username">Username</label>
                 <input type="text" id="username" name="name" placeholder="Enter Username" required>
@@ -203,7 +203,7 @@
             <input type="text" placeholder="Enter email" name="email" required>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password">
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
         </form>
     </div>
   </div>
