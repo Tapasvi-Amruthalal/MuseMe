@@ -10,7 +10,6 @@
         body, html {
             height: 100%;
             margin: 0;
-            font-family: "Roboto";
         }
 /* 
         .sidebar {
@@ -44,7 +43,6 @@
         .logo h3 {
             color: #030303;
             font-size: 24px;
-            font-family: 'Roboto';
             font-weight: 500;
             line-height: 31px;
             margin: 0;
@@ -71,7 +69,6 @@
         .username {
           color: #030303;
           font-size: 22px;
-          font-family: "Roboto";
           font-weight: 500;
           line-height: 23px;
           text-align: right;
@@ -89,7 +86,6 @@
             display: flex;
             align-items: center;
             font-size: 16px;
-            font-family: "Roboto";
             font-weight: 500;
             line-height: 19px;
         }
@@ -164,7 +160,6 @@
         .text {
             color: #ffffff;
             font-size: 24px;
-            font-family: "Roboto";
             font-weight: 700;
             line-height: 32px;
             text-align: center;
@@ -173,7 +168,6 @@
         .text-songname {
             color: #030303;
             font-size: 16px;
-            font-family: "Roboto";
             font-weight: 600;
             line-height: 22px;
         }
@@ -181,7 +175,6 @@
         .text-art {
             color: #030303;
             font-size: 14px;
-            font-family: "Roboto";
             line-height: 18px;
         }
 
@@ -220,8 +213,8 @@ body {
   min-height: 100vh;
 }
 .wrapper {
-  max-width: 1100px;
-  width: 90%;
+  max-width: 1500px;
+  width: 100%;
   position: relative;
   margin:30px 0px;
 }
@@ -253,14 +246,14 @@ body {
 .wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 4) - 12px);
+  grid-auto-columns: calc((100% / 5) - 12px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  align-items:center;
   gap: 16px;
   border-radius: 8px;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  margin-left:30px;
 }
 .carousel::-webkit-scrollbar {
   display: none;
@@ -351,7 +344,6 @@ body {
         <section class="discover">
             <h2>Trending</h2>
             <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left"></i>
                 <ul class="carousel">
                     <li class="card">
                     <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
@@ -384,7 +376,6 @@ body {
                     <span>Hozier</span>
                     </li>
                 </ul>
-                <i id="right" class="fa-solid fa-angle-right"></i>
                 </div>
         </section>
 
@@ -392,7 +383,6 @@ body {
         <section class="for-you">
             <h2>For you</h2>
             <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left"></i>
                 <ul class="carousel">
                     <li class="card">
                     <div class="img"><img src="images/img1.jpg" alt="img" draggable="false"></div>
@@ -425,16 +415,14 @@ body {
                     <span>Taylor Swift</span>
                     </li>
                 </ul>
-                <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
         </section>
     </div>
 </body>
 <script>
-    const wrapper = document.querySelector(".wrapper");
+const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper i");
 const carouselChildrens = [...carousel.children];
 
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
@@ -456,13 +444,6 @@ carouselChildrens.slice(0, cardPerView).forEach(card => {
 carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
-
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
-    });
-});
 
 const dragStart = (e) => {
     isDragging = true;

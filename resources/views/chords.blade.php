@@ -7,12 +7,14 @@
 <title>Fretboard</title>
 
 <style>
+
   body {
-font-family: Verdana, Helvetica, sans-serif;
 color:#444444;
 height:100%;
 }
-
+*{
+	font
+}
 a:link {color:#4B2EDE;text-decoration:none;}      /* unvisited link */
 a:visited {color:#4B2EDE;text-decoration:none;}  /* visited link */
 a:hover {color:#9D90DC;text-decoration:none;}  /* mouse over link */
@@ -24,7 +26,14 @@ width:auto;
 margin-left:30px;
 margin-right:30px;
 font-size:14px;
+display: grid;
+    align-items: center;
+    width: 80%;
+    font-size: large;
+    margin: auto;
 }
+
+
 
 #githublink {
 position:absolute;
@@ -35,9 +44,11 @@ right:5px;
 
 #title {
 text-align:center;
-font-size:34px;
+/* font-size:34px; */
 margin-top:15px;
 margin-bottom:0px;
+font-size: 3em;
+    font-weight: 600;
 }
 
 
@@ -75,6 +86,22 @@ fill-opacity:1;
 #chordselectorsflex{
     display: flex;
 }
+#chordselectors{
+	text-align:center;
+}
+#scaleselectors{
+	text-align:center;
+}
+#progselectors{
+	text-align:center;
+	padding-top:2em;
+}
+#scaleselctor{
+	display: flex;
+	text-align: center; 	
+
+}
+
 #scaleinfo, #chordinfo {
 text-align:center;
 margin-top:30px;
@@ -398,7 +425,6 @@ function drawopennotes(id,tuning) {
 		.attr("x",25)
 		.attr("y",5)
 		.attr("class","opennote")
-		.style("font-family","Verdana")
 		.style("font-size","14px")
 		.text(function (d) {return d;});
 	
@@ -432,7 +458,6 @@ function drawnotes(id,string,frets) {
 		.attr("x", d => d[0]==0 ? 28 : (d[0]*50)+23)
 		.attr("y", 4)
 		.attr("class","note")
-		.style("font-family","Verdana")
 		.style("font-size","11px")
 		.text(d => d[1]);
 		
@@ -441,7 +466,6 @@ function drawnotes(id,string,frets) {
 		.attr("x", d => d[0]==0 ? 28 : (d[0]*50)+23)
 		.attr("y", 4)
 		.attr("class","note")
-		.style("font-family","Verdana")
 		.style("font-size","11px")
 		.text(d => d[1]);
 		
@@ -463,7 +487,7 @@ function drawnotes(id,string,frets) {
 
 <div class="heading">I. Chords</div>
 
-<p class="info">The fretboard below shows the location of every note that occurs in a given chord  along the length of the fretboard. In the dropdown menus underneath the fretboard, you can select which chord's notes you want to display.  Here you can specify (i) the root note, (ii) the type of chord, and (iii) the tuning that the guitar is in.</p>
+<p class="info">The fretboard below shows the location of every note that occurs in a given chord  along the length of the fretboard. <br> In the dropdown menus underneath the fretboard, you can select which chord's notes you want to display. Here you can specify  <br>(i) the root note,  <br>(ii) the type of chord, and  <br>(iii) the tuning that the guitar is in.</p>
 
 <div id="chordinfo"></div>
 
@@ -474,40 +498,40 @@ function drawnotes(id,string,frets) {
 
 	<g id="frets" transform="translate(0,25)">
 		<line x1="105" y1="0" x2="105" y2="125" stroke-width="2" stroke="black"/>
-			<text x="100" y="140" font-family="Verdana" font-size="11px">1</text>
+			<text x="100" y="140" font-size="11px">1</text>
 		<line x1="155" y1="0" x2="155" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="180" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="150" y="140" font-family="Verdana" font-size="11px">2</text>
+			<text x="150" y="140" font-size="11px">2</text>
 		<line x1="205" y1="0" x2="205" y2="125" stroke-width="2" stroke="black"/>
-			<text x="200" y="140" font-family="Verdana" font-size="11px">3</text>
+			<text x="200" y="140" font-size="11px">3</text>
 		<line x1="255" y1="0" x2="255" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="280" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="250" y="140" font-family="Verdana" font-size="11px">4</text>
+			<text x="250" y="140" font-size="11px">4</text>
 		<line x1="305" y1="0" x2="305" y2="125" stroke-width="2" stroke="black"/>
-			<text x="300" y="140" font-family="Verdana" font-size="11px">5</text>
+			<text x="300" y="140" font-size="11px">5</text>
 		<line x1="355" y1="0" x2="355" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="380" cy="37" r="5" stroke="black" stroke-width="1" fill="black"/>
 			<circle cx="380" cy="87" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="350" y="140" font-family="Verdana" font-size="11px">6</text>
+			<text x="350" y="140" font-size="11px">6</text>
 		<line x1="405" y1="0" x2="405" y2="125" stroke-width="2" stroke="black"/>
-			<text x="400" y="140" font-family="Verdana" font-size="11px">7</text>
+			<text x="400" y="140" font-size="11px">7</text>
 		<line x1="455" y1="0" x2="455" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="480" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="450" y="140" font-family="Verdana" font-size="11px">8</text>
+			<text x="450" y="140" font-size="11px">8</text>
 		<line x1="505" y1="0" x2="505" y2="125" stroke-width="2" stroke="black"/>
-			<text x="500" y="140" font-family="Verdana" font-size="11px">9</text>
+			<text x="500" y="140" font-size="11px">9</text>
 		<line x1="555" y1="0" x2="555" y2="125" stroke-width="2" stroke="black"/>
-			<text x="550" y="140" font-family="Verdana" font-size="11px">10</text>
+			<text x="550" y="140" font-size="11px">10</text>
 		<line x1="605" y1="0" x2="605" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="630" cy="37" r="5" stroke="black" stroke-width="1" fill="black"/>
 			<circle cx="630" cy="87" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="600" y="140" font-family="Verdana" font-size="11px">11</text>
+			<text x="600" y="140" font-size="11px">11</text>
 		<line x1="655" y1="0" x2="655" y2="125" stroke-width="2" stroke="black"/>
-			<text x="650" y="140" font-family="Verdana" font-size="11px">12</text>
+			<text x="650" y="140" font-size="11px">12</text>
 		<line x1="705" y1="0" x2="705" y2="125" stroke-width="2" stroke="black"/>
-			<text x="700" y="140" font-family="Verdana" font-size="11px">13</text>
+			<text x="700" y="140" font-size="11px">13</text>
 		<line x1="755" y1="0" x2="755" y2="125" stroke-width="2" stroke="black"/>
-			<text x="750" y="140" font-family="Verdana" font-size="11px">14</text>
+			<text x="750" y="140" font-size="11px">14</text>
 	</g>
 	
 
@@ -595,7 +619,7 @@ function drawnotes(id,string,frets) {
 
 <div class="heading">II. Scales</div>
 
-<p class="info">The fretboard below shows the location of every note that occurs in a given scale along the length of the fretboard. In the dropdown menus underneath the fretboard, you can select the key for which you want to display a scale.  Here you can specify (i) the root note, (ii) the mode of the key, and (iii) the tuning that the guitar is in.</p>
+<p class="info">The fretboard below shows the location of every note that occurs in a given scale along the length of the fretboard. <br> In the dropdown menus underneath the fretboard, you can select the key for which you want to display a scale.  Here you can specify  <br>(i) the root note, <br> (ii) the mode of the key, and  <br>(iii) the tuning that the guitar is in.</p>
 
 <div id="scaleinfo"></div>
 
@@ -605,40 +629,40 @@ function drawnotes(id,string,frets) {
 
 	<g id="frets" transform="translate(0,25)">
 		<line x1="105" y1="0" x2="105" y2="125" stroke-width="2" stroke="black"/>
-			<text x="100" y="140" font-family="Verdana" font-size="11px">1</text>
+			<text x="100" y="140" font-size="11px">1</text>
 		<line x1="155" y1="0" x2="155" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="180" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="150" y="140" font-family="Verdana" font-size="11px">2</text>
+			<text x="150" y="140" font-size="11px">2</text>
 		<line x1="205" y1="0" x2="205" y2="125" stroke-width="2" stroke="black"/>
-			<text x="200" y="140" font-family="Verdana" font-size="11px">3</text>
+			<text x="200" y="140" font-size="11px">3</text>
 		<line x1="255" y1="0" x2="255" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="280" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="250" y="140" font-family="Verdana" font-size="11px">4</text>
+			<text x="250" y="140" font-size="11px">4</text>
 		<line x1="305" y1="0" x2="305" y2="125" stroke-width="2" stroke="black"/>
-			<text x="300" y="140" font-family="Verdana" font-size="11px">5</text>
+			<text x="300" y="140" font-size="11px">5</text>
 		<line x1="355" y1="0" x2="355" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="380" cy="37" r="5" stroke="black" stroke-width="1" fill="black"/>
 			<circle cx="380" cy="87" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="350" y="140" font-family="Verdana" font-size="11px">6</text>
+			<text x="350" y="140" font-size="11px">6</text>
 		<line x1="405" y1="0" x2="405" y2="125" stroke-width="2" stroke="black"/>
-			<text x="400" y="140" font-family="Verdana" font-size="11px">7</text>
+			<text x="400" y="140" font-size="11px">7</text>
 		<line x1="455" y1="0" x2="455" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="480" cy="62" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="450" y="140" font-family="Verdana" font-size="11px">8</text>
+			<text x="450" y="140" font-size="11px">8</text>
 		<line x1="505" y1="0" x2="505" y2="125" stroke-width="2" stroke="black"/>
-			<text x="500" y="140" font-family="Verdana" font-size="11px">9</text>
+			<text x="500" y="140" font-size="11px">9</text>
 		<line x1="555" y1="0" x2="555" y2="125" stroke-width="2" stroke="black"/>
-			<text x="550" y="140" font-family="Verdana" font-size="11px">10</text>
+			<text x="550" y="140" font-size="11px">10</text>
 		<line x1="605" y1="0" x2="605" y2="125" stroke-width="2" stroke="black"/>
 			<circle cx="630" cy="37" r="5" stroke="black" stroke-width="1" fill="black"/>
 			<circle cx="630" cy="87" r="5" stroke="black" stroke-width="1" fill="black"/>
-			<text x="600" y="140" font-family="Verdana" font-size="11px">11</text>
+			<text x="600" y="140" font-size="11px">11</text>
 		<line x1="655" y1="0" x2="655" y2="125" stroke-width="2" stroke="black"/>
-			<text x="650" y="140" font-family="Verdana" font-size="11px">12</text>
+			<text x="650" y="140" font-size="11px">12</text>
 		<line x1="705" y1="0" x2="705" y2="125" stroke-width="2" stroke="black"/>
-			<text x="700" y="140" font-family="Verdana" font-size="11px">13</text>
+			<text x="700" y="140" font-size="11px">13</text>
 		<line x1="755" y1="0" x2="755" y2="125" stroke-width="2" stroke="black"/>
-			<text x="750" y="140" font-family="Verdana" font-size="11px">14</text>
+			<text x="750" y="140" font-size="11px">14</text>
 	</g>
 	
 
@@ -723,7 +747,7 @@ function drawnotes(id,string,frets) {
 
 <div class="heading">III. Putting it Together: Chord Progressions</div>
 
-<p class="info">The table below displays the seven chords based on a given key/scale. In the drop down menu you can select the root note and the key (major or minor) for which you want to display the chords.</p>
+<p class="info">The table below displays the seven chords based on a given key/scale. <br> In the drop down menu you can select the root note and the key (major or minor) for which you want to display the chords.</p>
 
 <p>Chords based on <span id="keyspan">C Major</span>:</p>
 
