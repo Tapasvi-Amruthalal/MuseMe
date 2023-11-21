@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("artist");
             $table->date("release_year");
             $table->string("genre");
+            $table->string("link");
             $table->timestamps();
         });
     }
