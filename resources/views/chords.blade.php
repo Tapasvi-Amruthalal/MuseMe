@@ -13,7 +13,9 @@ color:#444444;
 height:100%;
 color:oldlace;
 }
-
+*{
+	font
+}
 a:link {color:#4B2EDE;text-decoration:none;}      /* unvisited link */
 a:visited {color:#4B2EDE;text-decoration:none;}  /* visited link */
 a:hover {color:#9D90DC;text-decoration:none;}  /* mouse over link */
