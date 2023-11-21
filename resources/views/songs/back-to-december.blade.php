@@ -144,6 +144,7 @@
                 <!-- Your main content goes here -->
                 <h1>Main Content</h1>
                 <div class="pre  inline" style="height: 669px; font-size: 14px; line-height: 46.2px;">
+                    <div class="pre  inline" style="height: 716px; font-size: 15px; line-height: 49.5px;">
                     <div class="song-lyric-note">
                         <div class="chord_lyric_line text_only">Tone D: Capo 2</div>
                     </div>
