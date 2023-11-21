@@ -258,6 +258,11 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+
+/* .carousel{
+  transition: scroll-behavior 1s ease-in-out;
+
+} */
 .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -278,6 +283,7 @@ body {
   align-items: center;
 }
 .carousel .card {
+  
   scroll-snap-align: start;
   height: 342px;
   list-style: none;
@@ -489,7 +495,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the carousel after every 2500 ms
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2000);
 }
 autoPlay();
 
