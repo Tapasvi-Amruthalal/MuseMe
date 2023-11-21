@@ -19,7 +19,7 @@
           :root {
             --body-color: #e4e9f7;
             --sidebar-color: #fff;
-            --primary-color: #695cfe;
+            --primary-color: black;
             --primary-color-light: #f6f5ff;
             --toggle-color: #ddd;
             --text-color: #707070;
@@ -61,8 +61,7 @@
             list-style: none;
             display: flex;
             align-items: center;
-            margin-top: 10px;
-            padding:10px;
+            padding:0px 10px;
           }
 
           .sidebar header .image,
@@ -236,7 +235,8 @@
           }
 
           .bi{
-            font-size:25px
+            font-size:25px;
+            color:tan;
           }
           .home {
             position: absolute;
@@ -307,34 +307,34 @@
       <div class="menu">
 
         <ul class="menu-links">
-          <li class="nav-link">
+          <li class="nav-link" style="height: 70px;">
             <div class="image-container">
             <div class="text1">V</div>
             </div>
             <span class="text nav-text" style="margin-top:10px; padding-left:12px">NAME</span>
           </li>
           
-          <li class="nav-link">
+          <li class="nav-link" style="height: 50px;">
             <a href="/">
               <i class="bi bi-house-fill"></i>
               <span class="text nav-text">HOME</span>
             </a>
           </li>
-          <li class="nav-link">
+          <li class="nav-link" style="height: 50px;">
             <a href="/liked">
               <i class="bi bi-suit-heart-fill"></i>
               <span class="text nav-text">LIKED SONGS</span>
             </a>
           </li>
 
-          <li class="nav-link">
+          <li class="nav-link" style="height: 50px;">
             <a href="/playlist">
               <i class="bi bi-file-earmark-music-fill"></i>
               <span class="text nav-text">MY PLAYLIST</span>
             </a>
           </li>
 
-          <li class="nav-link">
+          <li class="nav-link" style="height: 50px;">
             <a href="/chords">
               <i class="bi bi-music-note-beamed"></i>
               <span class="text nav-text">CHORDS</span>

@@ -1,7 +1,5 @@
 @extends('navbar')
 @section('content')
-<!-- bullshit -->
-<h1 style="padding:100px">CHORDS PAGE</h1>
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -760,17 +758,9 @@ function drawnotes(id,string,frets) {
 <option value="2,1,2,2,1,2,2">Minor</option>
 </select>
 
-</div> <!-- Close progselectors div -->
+</div>
 
-
-
-<p>Here's a <a href="http://musictheorysite.com/namethatkey/">nice program</a> from the MusicTheorySite for going in the other direction: determining the key on the basis of a chord progression.</p>
-
-
-
-</div> <!-- Close container div -->
-
-<div id='footer'>&copy; 2018 Michael Rieppel</div>
+</div> 
 
 </body>
 </html>
