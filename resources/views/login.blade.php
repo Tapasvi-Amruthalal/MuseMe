@@ -87,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8;
+    background:seashell;
   }
   .container {
     display: flex;

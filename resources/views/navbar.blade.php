@@ -17,9 +17,9 @@
           }
 
           :root {
-            --body-color: #e4e9f7;
+            --body-color: darkslategray;
             --sidebar-color: #fff;
-            --primary-color: black;
+            --primary-color: cadetblue;
             --primary-color-light: #f6f5ff;
             --toggle-color: #ddd;
             --text-color: #707070;
@@ -236,7 +236,7 @@
 
           .bi{
             font-size:25px;
-            color:tan;
+            color:darkslategray;
           }
           .home {
             position: absolute;

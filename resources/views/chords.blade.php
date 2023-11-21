@@ -11,6 +11,7 @@
   body {
 color:#444444;
 height:100%;
+color:oldlace;
 }
 *{
 	font
@@ -71,7 +72,7 @@ margin-bottom:15px;
   margin-right:auto; 
 }
 #chordboard circle.note {
-fill:rgb(247,148,89);
+fill:rgb(222 197 183);
 fill-opacity:1;
 }
 #scaleboard{
@@ -80,7 +81,7 @@ fill-opacity:1;
   margin-right:auto; 
 }
 #scaleboard circle.note {
-fill:rgb(143,154,249);
+fill: rgb(206 209 238);
 fill-opacity:1;
 }
 #chordselectorsflex{
@@ -110,7 +111,8 @@ margin-bottom:15px;
 
 select {
 padding: 5px 8px;
-/*border: solid 1px #444444;*/
+border: solid 1px oldlace;
+color:oldlace;
 box-shadow: none;
 background: transparent;
 background-image: none;
