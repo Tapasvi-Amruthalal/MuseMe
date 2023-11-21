@@ -212,6 +212,9 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+.h{
+    color:seashell;
+}
 .wrapper {
   max-width: 1500px;
   width: 100%;
@@ -342,7 +345,7 @@ body {
 
         <!-- Discover Section -->
         <section class="discover">
-            <h2>Trending</h2>
+            <h2 class="h">Trending</h2>
             <div class="wrapper">
                 <ul class="carousel">
                     <li class="card">
@@ -381,7 +384,7 @@ body {
 
         <!-- For You Section -->
         <section class="for-you">
-            <h2>For you</h2>
+            <h2 class="h">Recently Played</h2>
             <div class="wrapper">
                 <ul class="carousel">
                     <li class="card">
