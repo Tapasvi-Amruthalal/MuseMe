@@ -272,7 +272,7 @@
             padding-right:20px;
           }
           .text1 {
-            background-color: darkslateblue;
+            background-color: tan;
             color: white;
             font-size: 25px;
             font-weight: bold;
