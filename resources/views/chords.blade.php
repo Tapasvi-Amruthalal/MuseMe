@@ -23,7 +23,7 @@ a:active {color:#FFA04D;text-decoration:none;}  /* selected link */
 
 
 #content {
-width:auto;
+width:10vw;
 margin-left:30px;
 margin-right:30px;
 font-size:14px;

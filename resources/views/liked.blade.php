@@ -5,7 +5,7 @@
 <script> window.location = "/login"; </script>
 
 @endif
-<h1 style="padding:100px">LIKED SONGS PAGE {{ session('name') }}</h1>
+<h1 style="padding-left:0px; padding-top:100px; text-align:center; font-size:3em; color:white">My Liked Songs</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@
 </head>
 <body>
 
-<table>
+<table style="margin-top:2em;">
   <thead>
     <tr>
       <th>Name of Song</th>

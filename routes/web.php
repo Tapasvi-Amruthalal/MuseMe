@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\searchbar;
 use App\Http\Controllers\search;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,7 @@ Route::get('/liked','App\Http\Controllers\MuseController@liked');
 Route::get('/playlist','App\Http\Controllers\MuseController@playlist');
 Route::get('/chords','App\Http\Controllers\MuseController@chords');
 
+Route::get('/playlist/{search}', [searchbar::class, 'playlist'])->name('playlist');
 
 
 Route::get('/login', [AuthManager::class, 'login'])->name('login');
