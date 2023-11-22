@@ -336,14 +336,14 @@
           <li class="nav-link" style="height: 50px;">
             <a href="/playlist">
               <i class="bi bi-file-earmark-music-fill"></i>
-              <span class="text nav-text">MY PLAYLIST</span>
+              <span class="text nav-text">SONG LIST</span>
             </a>
           </li>
 
           <li class="nav-link" style="height: 50px;">
             <a href="/chords">
               <i class="bi bi-music-note-beamed"></i>
-              <span class="text nav-text">CHORDS</span>
+              <span class="text nav-text">VISUALISER</span>
             </a>
           </li>
         </ul>

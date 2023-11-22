@@ -112,9 +112,9 @@ margin-bottom:15px;
 select {
 padding: 5px 8px;
 border: solid 1px oldlace;
-color:oldlace;
+color:black;
 box-shadow: none;
-background: transparent;
+background: oldlace;
 background-image: none;
 font-size: 12px;
 overflow: hidden;
