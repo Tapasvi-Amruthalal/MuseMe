@@ -55,5 +55,10 @@ class AuthManager extends Controller
 
        return redirect(route('login'))->with("success", "Registration Successful");
     }
+
+    function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
     
 }

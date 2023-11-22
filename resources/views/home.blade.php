@@ -315,7 +315,10 @@ body {
   color: #6A6D78;
   font-size: 1.31rem;
 }
-
+a{
+  text-decoration: none;
+  color:000;
+}
 @media screen and (max-width: 1100px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 3) - 9px);
@@ -341,49 +344,53 @@ body {
 
    
     <div class="content">
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <div class="search-icon">
-                <img src="/images/search.svg" alt="Search">
-            </div>
-            <input type="text" class="search-input" placeholder="Search">
-        </div>
 
         <!-- Discover Section -->
         <section class="discover">
             <h2 class="h">Trending</h2>
             <div class="wrapper">
                 <ul class="carousel">
-                    <li class="card">
-                    <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
-                    <h2>Flowers</h2>
-                    <span>Miley Cyrus</span>
-                    </li>
-                    <li class="card">
-                    <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-                    <h2>Cruel Summer</h2>
-                    <span>Taylor Swift</span>
-                    </li>
-                    <li class="card">
-                    <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
-                    <h2>Vampire</h2>
-                    <span>Olivia Rodrigo</span>
-                    </li>
-                    <li class="card">
-                    <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
-                    <h2>Nonsense</h2>
-                    <span>Sabrina Carpenter</span>
-                    </li>
-                    <li class="card">
-                    <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
-                    <h2>Ceilings</h2>
-                    <span>Lizzy McAlpine</span>
-                    </li>
-                    <li class="card">
-                    <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
-                    <h2>Eat Your Young</h2>
-                    <span>Hozier</span>
-                    </li>
+                    <a href="/flowers"><li class="card">
+                      <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
+                      <h2>Flowers</h2>
+                      <span>Miley Cyrus</span>
+                      </li>
+                    </a>
+                    <a href="/cruelsummer">
+                      <li class="card">
+                        <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+                        <h2>Cruel Summer</h2>
+                        <span>Taylor Swift</span>
+                      </li>
+                    </a>
+                    <a href="/vampire">
+                      <li class="card">
+                        <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
+                        <h2>Vampire</h2>
+                        <span>Olivia Rodrigo</span>
+                      </li>
+                    </a>
+                    <a href="/nonsense">
+                      <li class="card">
+                        <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
+                        <h2>Nonsense</h2>
+                        <span>Sabrina Carpenter</span>
+                      </li>
+                    </a>
+                    <a href="/ceilings">
+                      <li class="card">
+                        <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
+                        <h2>Ceilings</h2>
+                        <span>Lizzy McAlpine</span>
+                      </li>
+                    </a>
+                    <a href="/eatyouryoung">
+                      <li class="card">
+                        <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+                        <h2>Eat Your Young</h2>
+                        <span>Hozier</span>
+                      </li>
+                    </a>
                 </ul>
                 </div>
         </section>
@@ -393,36 +400,48 @@ body {
             <h2 class="h">Recently Played</h2>
             <div class="wrapper">
                 <ul class="carousel">
+                  <a href="/onemorelight">
                     <li class="card">
-                    <div class="img"><img src="images/img1.jpg" alt="img" draggable="false"></div>
-                    <h2>One More Light</h2>
-                    <span>Linkin Park</span>
+                      <div class="img"><img src="images/img1.jpg" alt="img" draggable="false"></div>
+                      <h2>One More Light</h2>
+                      <span>Linkin Park</span>
                     </li>
+                  </a>
+                  <a href="/paralyzed">
                     <li class="card">
-                    <div class="img"><img src="images/img2.jpg" alt="img" draggable="false"></div>
-                    <h2>Paralyzed</h2>
-                    <span>NF</span>
+                      <div class="img"><img src="images/img2.jpg" alt="img" draggable="false"></div>
+                      <h2>Paralyzed</h2>
+                      <span>NF</span>
                     </li>
+                  </a>
+                  <a href="/justlikeyou">
                     <li class="card">
-                    <div class="img"><img src="images/img3.jpg" alt="img" draggable="false"></div>
-                    <h2>Just Like You</h2>
-                    <span>NF</span>
+                      <div class="img"><img src="images/img3.jpg" alt="img" draggable="false"></div>
+                      <h2>Just Like You</h2>
+                      <span>NF</span>
                     </li>
+                  </a>
+                  <a href="/willow">
                     <li class="card">
-                    <div class="img"><img src="images/img4.jpg" alt="img" draggable="false"></div>
-                    <h2>Willow</h2>
-                    <span>Taylor Swift</span>
+                      <div class="img"><img src="images/img4.jpg" alt="img" draggable="false"></div>
+                      <h2>Willow</h2>
+                      <span>Taylor Swift</span>
                     </li>
+                  </a>
+                  <a href="/graveyard">  
                     <li class="card">
-                    <div class="img"><img src="images/img5.jpg" alt="img" draggable="false"></div>
-                    <h2>Graveyard</h2>
-                    <span>Halsey</span>
+                      <div class="img"><img src="images/img5.jpg" alt="img" draggable="false"></div>
+                      <h2>Graveyard</h2>
+                      <span>Halsey</span>
                     </li>
+                  </a>
+                  <a href="/seven">
                     <li class="card">
-                    <div class="img"><img src="images/img6.jpg" alt="img" draggable="false"></div>
-                    <h2>Seven</h2>
-                    <span>Taylor Swift</span>
+                      <div class="img"><img src="images/img6.jpg" alt="img" draggable="false"></div>
+                      <h2>Seven</h2>
+                      <span>Taylor Swift</span>
                     </li>
+                  </a>
                 </ul>
             </div>
         </section>

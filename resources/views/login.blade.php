@@ -199,11 +199,18 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter Password">
                 <button type="submit">Login</button>
-        </form>
+              </form>
+              <a href="{{url("/registration")}}">
+                <button type="submit">Register</button>
+              </a>
+        
+
+             
     </div>
   </div>
 </div>
 
 </body>
+
 </html>
 

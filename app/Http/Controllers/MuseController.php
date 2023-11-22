@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\song;
 class MuseController extends Controller
 {
     //
@@ -17,10 +17,18 @@ class MuseController extends Controller
     }
     function playlist()
     {
-        return view('playlist');
+        $list= song::all();
+        return view('playlist', ['songs'=>$list]);
     }
     function chords()
     {
         return view('chords');
     }
+
+    public function showsongs(){
+
+
+
+    }
+
 }
