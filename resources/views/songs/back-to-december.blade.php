@@ -23,6 +23,7 @@
             margin-top: 20px;
             /* Adjusted margin-top for mobile view */
             background-color: #fff;
+            height: 100vh;
         }
 
         .fixed-section {
@@ -30,7 +31,7 @@
             /* bottom: 0; */
             /* Changed top to bottom */
             right: 2vw;
-            background-color: #333;
+            background-color: darkslategray;
             padding: 20px;
             box-sizing: border-box;
             display: flex;
@@ -67,18 +68,21 @@
 
         .player-buttons {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             margin-top: 10px;
+            align-content: center;
+            
         }
 
         .button {
-            margin: 0 10px;
+            margin: 10px 10px;
             padding: 10px;
-            background-color: #3498db;
+            background-color: fff;
             color: #fff;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius:1005px;
         }
         a.like{
             padding: 8px;
@@ -100,15 +104,24 @@
             color: red;
             /* font-size: x-large; */
         }
-
+        .value-setter{
+            display: none;
+        }
+    .youtube{
+            border-radius:10px;
+            color:black;
+            pa
+            }
         @media (max-width: 768px) {
             .container {
-                flex-direction: column-reverse;
                 /* Adjusted flex-direction */
             }
-
-            .fixed-section {
-                width: 100%;
+            .lyrics{
+                margin-bottom:15vh;
+            }
+            .fixed-section{
+                flex-direction: column;
+                width: 70vw;
                 /* bottom: 0; */
                 height: 100px;
                 position: fixed;
@@ -118,25 +131,45 @@
                 border-bottom-right-radius: 20px;
                 
                 /* margin-top: 20px; */
-                bottom:0em;
+                top:85vh;
+                bottom:0px;
                 /* Adjusted margin-top */
             }
-
+            .rounded-section{
+                border-radius:80px;
+            }
             .media-player {
-                margin-top: 10px;
+                margin: 30px;
+                margin-top: 35px;
             }
 
             .album-cover {
-                visibility: hidden;
+                display: none;
             }
 
             .player-buttons {
                 margin-top: 5px;
+                flex-direction: row;
+            }
+            
+            .like{
+              position:absolute;
+              left:1.7em;
+              bottom:2em; 
+    
+            }
+            .youtube{
+                position:absolute;
+              right:1.7em;
+              bottom:2em; 
             }
         }
     </style>
+     
     </head>
-
+    <div class="value-setter">
+        {{$song=2}}
+    </div>
     <body>
 
         <div class="container">
@@ -468,20 +501,55 @@
                     {{-- <source src="/audio/back-to-december/mp3" type="audio/mp3"> --}}
                     Your browser does not support the audio tag.
                 </audio>
-
+                {{-- <div class="controls">
+                    <div> <i class="fa-solid fa-backward"></i></div>
+                    <div onclick="playPause()"> <i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                    <div><i class="fa-solid fa-forward"></i> </div>
+                </div> --}}
                 {{-- <audio controls>
                     <source src="{{ route('tracks.player.show', array('slug' => $track->attachment->slug)) }}" type="audio/mpeg">
                 </audio> --}}
-                    
-
                 <!-- Play Button (Simplified for Mobile) -->
                 <div class="player-buttons">
-                    <button class="button">Play</button>
-                    {{$song=2}}
                     @include('components.like')
+                    
+                    <button class="button youtube" style=" paddoi"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg> YOUTUBE</button>
                 </div>
             </div>
         </div>
-
-
+        <script>
+            let progress = document.getElementById("progress");
+            let song = document.getElementById("song");
+            let ctrlIcon = document.getElementById("ctrlIcon");
+            song.onloadedmetadata=function(){
+                progress.max=song.duration;
+                progress.value=song.currentTime;
+            }
+            function playPause(){
+                if(ctrIcon.classList.contains("fa-pause")){
+                    song.pause();
+                    ctrlIcon.classList.remove("fa-pause");
+                    ctrlIcon.classList.add("fa-play");
+        
+                }
+                else{
+                    song.play();
+                    ctrlIcon.classList.add("fa-pause");
+                    ctrlIcon.classList.remove("fa-play");
+                }
+            }
+            if(song.play()){
+                setInterval(()=>{
+                    progress.value=song.currentTime;
+                },500);
+            }
+            progress.onchange = function(){
+                song.play();
+                song.currentTime = progress.value;
+                ctrlIcon.classList.add("fa-pause");
+                    ctrlIcon.classList.remove("fa-play");
+        
+            }
+            </script>
+    </body>
     @stop

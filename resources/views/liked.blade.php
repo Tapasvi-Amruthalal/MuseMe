@@ -21,9 +21,9 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f8f8f8;
+      background-color: darkslategray;
     }
-
+  
     table {
       border-collapse: collapse;
       width: 80%;
@@ -51,6 +51,15 @@
     tr:hover {
       background-color: #f0f0f0;
     }
+    td {
+      /* cursor: pointer;
+      transition: background-color 0.3s; */
+      background-color:#fff
+    }
+
+    /* td:hover {
+      background-color: #f0f0f0;
+    } */
 
     a {
       text-decoration: none;
@@ -65,7 +74,6 @@
     <tr>
       <th>Name of Song</th>
       <th>Artist</th>
-      <th>Release Year</th>
       <th>Genre</th>
     
     </tr>
@@ -76,7 +84,6 @@
       
       <tr>
         {{-- <td><a href="#">{{$song->user_id}}</a></td> --}}
-        <td><a href="{{$sing->link}}">{{$sing->song_id}}</a></td>
         <td><a href="{{$sing->link}}">{{$sing->title}}</a></td>
         <td><a href="{{$sing->link}}">{{$sing->artist}}</a></td>
         <td><a href="{{$sing->link}}">{{$sing->genre}}</a></td>

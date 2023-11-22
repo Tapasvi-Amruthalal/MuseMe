@@ -285,7 +285,7 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
           }
-        </style>
+          </style>
     </head>
     <body>
     <nav class="sidebar close">
@@ -307,13 +307,19 @@
       <div class="menu">
 
         <ul class="menu-links">
+          @if(Auth::check())
+          @php
+            $userName = auth()->user()->name;
+            $firstLetter = $userName ? strtoupper(substr($userName, 0, 1)) : '';
+        @endphp
           <li class="nav-link" style="height: 70px;">
             <div class="image-container">
-            <div class="text1">V</div>
+            <div class="text1">{{$firstLetter}}
             </div>
-            <span class="text nav-text" style="margin-top:10px; padding-left:12px">NAME</span>
+            </div>
+            <span class="text nav-text" style="margin-top:10px; padding-left:12px">{{auth()->user()->name}}</span>
           </li>
-          
+          @endif
           <li class="nav-link" style="height: 50px;">
             <a href="/">
               <i class="bi bi-house-fill"></i>
