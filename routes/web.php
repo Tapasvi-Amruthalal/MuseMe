@@ -42,7 +42,8 @@ Route::get('/liked','App\Http\Controllers\MuseController@liked');
 Route::get('/playlist','App\Http\Controllers\MuseController@playlist');
 Route::get('/chords','App\Http\Controllers\MuseController@chords');
 
-Route::get('/playlist/{search}', [searchbar::class, 'playlist'])->name('playlist');
+Route::get
+('/playlist/{search}', [searchbar::class, 'playlist'])->name('playlist');
 
 
 Route::get('/login', [AuthManager::class, 'login'])->name('login');
