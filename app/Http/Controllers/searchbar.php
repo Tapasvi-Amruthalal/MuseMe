@@ -7,18 +7,15 @@ use App\Models\song;
 class searchbar extends Controller
 {
     //
-    public function view(Request $req){
-    //     $search= $req['search']?? "";
-    //     if($search !=""){
-    //         $songs=song::where('title', '=',$search)->get();
+    // function playlist(Request $req)
+    // {
+    //     $search=$req['search']??"";
+    //     if($search!=''){
+    //         //where
+    //         $list=song::where('title','=',$search)->get();
+    //     }else{
+    //         $list= song::all();
     //     }
-    //     else{
-    //         $songs=song::all();
-    //     }
-    //     // $songs=song::all();
-    // // $data=compact('songs', 'search');
-    //     return view('home', ['search'=>$songs]);
-        return $req;
-
-    }
+    //     return view('playlist', ['songs'=>$list]);
+    // }
 }

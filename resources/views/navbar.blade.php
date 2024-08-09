@@ -307,18 +307,22 @@
       <div class="menu">
 
         <ul class="menu-links">
+          {{-- checks if the user is logged in, only then displays the block --}}
           @if(Auth::check())
           @php
+          // to display only the first letter of the User Name
             $userName = auth()->user()->name;
             $firstLetter = $userName ? strtoupper(substr($userName, 0, 1)) : '';
         @endphp
+          <a href="{{url('login')}}">
           <li class="nav-link" style="height: 70px;">
             <div class="image-container">
-            <div class="text1">{{$firstLetter}}
-            </div>
-            </div>
-            <span class="text nav-text" style="margin-top:10px; padding-left:12px">{{auth()->user()->name}}</span>
-          </li>
+                <div class="text1">{{$firstLetter}}
+                </div>
+              </div>
+              <span class="text nav-text" style="margin-top:10px; padding-left:12px">{{auth()->user()->name}}</span>
+            </li>
+          </a>
           @endif
           <li class="nav-link" style="height: 50px;">
             <a href="/">

@@ -23,7 +23,7 @@ a:active {color:#FFA04D;text-decoration:none;}  /* selected link */
 
 
 #content {
-width:auto;
+width:10vw;
 margin-left:30px;
 margin-right:30px;
 font-size:14px;
@@ -89,7 +89,7 @@ fill-opacity:1;
 }
 #chordselectors{
 	text-align:center;
-}
+}	
 #scaleselectors{
 	text-align:center;
 }
@@ -481,8 +481,6 @@ function drawnotes(id,string,frets) {
 <body onload="putScale();putChord();putProg();">
 
 <div id="content">
-
-{{-- <div id='githublink'><a href='https://github.com/mrieppel/fretboard/'><img src="github.png" style="height:25px;"></img></a></div> --}}
 
 <div id="title">Fretboard</div>
 <div id="subtitle">Guitar Theory Visualization</div>

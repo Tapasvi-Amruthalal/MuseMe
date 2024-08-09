@@ -15,9 +15,15 @@ class MuseController extends Controller
     {
         return view('liked');
     }
-    function playlist()
+    function playlist(Request $req)
     {
-        $list= song::all();
+        $search=$req['search']??"";
+        if($search!=''){
+            //where
+            $list=song::where('title','LIKE',"%$search%")->orwhere('artist','LIKE',"%$search%")->orwhere('genre','LIKE',"%$search%")->get();
+        }else{
+            $list= song::all();
+        }
         return view('playlist', ['songs'=>$list]);
     }
     function chords()
